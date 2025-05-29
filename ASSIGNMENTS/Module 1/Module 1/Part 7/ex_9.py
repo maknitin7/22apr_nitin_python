@@ -1,0 +1,3 @@
+str=" we are the future of Tops Technologies"
+print(str[0::2])
+          
