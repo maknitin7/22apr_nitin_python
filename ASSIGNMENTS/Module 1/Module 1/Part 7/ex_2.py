@@ -1,3 +1,0 @@
-a= " String"
-
-print(a)
