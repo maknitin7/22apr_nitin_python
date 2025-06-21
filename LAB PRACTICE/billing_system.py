@@ -13,13 +13,16 @@ def billing_system():
         
         items.append((food,qty,price, item_total))
 
-        more= input(" Do you want moe items? (yes/no):").lower()
-        if more!= "yes":
+        more= input(" Do you want moe items? (1 for yes/2 for no):")
+        if more == '1':
+            continue
+        elif more == '2':
+            print("Thank you for your order!")
             break
         
 
     print("\n -----   Bill Summary ----- \n ")
-
+    
     for item in items:
         food, qty, price, item_total = item
         print(f" items: {food}, quantity: {qty}, price: {price}, subtotal: {item_total}")
