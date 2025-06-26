@@ -1,3 +1,4 @@
+import pandas
 def billing_system():
     total=0
     items=[]
@@ -23,11 +24,10 @@ def billing_system():
 
     print("\n -----   Bill Summary ----- \n ")
     
-    for item in items:
-        food, qty, price, item_total = item
-        print(f" items: {food}, quantity: {qty}, price: {price}, subtotal: {item_total}")
+    DF= pandas.DataFrame(items,columns=[["Food", "Qauntity", "price", "Subtotal"]])
+    print(DF)
 
     print("\n GRAND TOTAL: ", total)
-    
+
 
 billing_system()

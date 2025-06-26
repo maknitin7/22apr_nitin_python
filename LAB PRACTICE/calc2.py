@@ -16,16 +16,16 @@ def divide(a, b):
 def calculator():
     while True:
         print("\nSimple Calculator")
-        print("1. Add")
-        print("2. Subtract")
-        print("3. Multiply")
-        print("4. Divide")
+        print("1. Additon")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
         print("5. Exit")
 
         choice = input("Choose an operation (1-5): ")
 
         if choice == '5':
-            print("Goodbye!")
+            print("Thank you for using my calculater!")
             break
 
         if choice in ['1', '2', '3', '4']:
@@ -45,6 +45,6 @@ def calculator():
             elif choice == '4':
                 print("Result:", divide(num1, num2))
         else:
-            print("Invalid choice. Please select a number between 1 and 5.")
+            print("Invalid choice. Please select a number between 1 to 5.")
 
 calculator()
