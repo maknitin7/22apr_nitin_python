@@ -1,0 +1,11 @@
+Created at:2025-07-02 16:54:33.624822
+ -----   Bill Summary ----- 
+        Name   Mobile No    Food Qauntity  price Subtotal   GST
+0     niitn       99999   pizza        2  200.0    400.0  72.0
+1      aadi   999999998  burger        4   45.0    180.0  32.4
+2  aniruddh  1234567890  burger        4   45.0    180.0  32.4Created at:2025-07-02 17:03:19.383841
+ -----------------   Bill Summary ------------------ 
+     Name   Mobile No    Food Qauntity  price Subtotal   GST
+0  Nitin  9313283528   pizza        2  200.0    400.0  72.0
+1   Aadi  9824641854  burger       10   45.0    450.0  81.0
+ GRAND TOTAL : 1003.0

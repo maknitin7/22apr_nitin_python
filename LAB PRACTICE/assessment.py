@@ -1,3 +1,5 @@
+import pandas as pd
+qa= pd.read_csv("general_knowledge_qna.csv")
 questions = {}
 print("Welcome to TOPS QUIZ GAMING CHALLENGE")
 
@@ -20,6 +22,12 @@ if role==1:
                 'answer': answer
             }
         elif choice==2:
+            for index, row in qa.iterrows():
+                print(f"Q{index + 1}: {row['Question']}")
+                print(f"A   : {row['Answer']}\n")
+
+            
+
 
         elif choice==3:
             print("Delete your question here: ")
@@ -29,6 +37,10 @@ if role==1:
                 print("Question deleted successfully.")
             else:
                 print("Question not found.")
-
+        elif choice==4:
+            print("Exiting the Quiz Master mode.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
             
 
