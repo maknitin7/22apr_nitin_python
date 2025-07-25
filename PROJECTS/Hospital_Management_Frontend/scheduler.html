@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scheduler & Queue Manager - HMS</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Scheduler & Queue Manager</h1>
+    <a href="index.html" class="back-link">← Back to Dashboard</a>
+  </header>
+
+  <main class="container">
+    <section class="box">
+      <h2>Available Appointment Slots</h2>
+      <ul>
+        <li>10:30 AM - Available</li>
+        <li>11:00 AM - Booked</li>
+        <li>11:30 AM - Available</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Book New Appointment</h2>
+      <input type="text" placeholder="Patient Name" />
+      <input type="datetime-local" />
+      <button>Book Appointment</button>
+    </section>
+
+    <section class="box">
+      <h2>Today's Appointment Queue</h2>
+      <ul>
+        <li>9:00 AM - Raj Patel <button>Reschedule</button> <button>Mark Absent</button></li>
+        <li>9:30 AM - Priya Shah <button>Reschedule</button> <button>Mark Absent</button></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
