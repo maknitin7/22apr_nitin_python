@@ -36,4 +36,4 @@ except Exception as e:
 else:
     user=open("user.txt", "a")
     #user.write("Created at:", str(datetime.datetime.now()))
-    user.write(f"name:{name}\n email:{email}\n mobile:{mobile}\n password:{password}\n")
+    user.write(f"\n name:{name}\n email:{email}\n mobile:{mobile}\n password:{password}\n")

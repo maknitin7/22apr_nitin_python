@@ -24,5 +24,4 @@ class student:
         #print("Student Name: ", self.stname)
 
 st=student()
-
 st.getdata()

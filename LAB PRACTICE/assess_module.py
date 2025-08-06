@@ -1,8 +1,6 @@
-import pandas as pd
+questions={}
 import datetime
-#qa= pd.read_csv("general_knowledge_qna.csv")
 
-questions = {}
 
 def quiz_master():
 
@@ -11,7 +9,7 @@ def quiz_master():
         print("                 Welcome Master          \n Shake your brain and Add some challenging questions... \n")
         print("---------- MENU---------- \n Press 1 for add questions. \n Press 2 for view questions. \n Press 3 for delete questions. \n Press 4 for exit.")
     
-        choice= int(input("Enter your choice: "))
+        choice= int(input("Which Operation You want to Perform? "))
         if choice==1:
                 try:
                     print("Add your question here: ")
@@ -23,9 +21,9 @@ def quiz_master():
                     option1= input("Option 1: ")
                     option2= input("Option 2: ")
                     option3= input("Option 3: ")
-                    answer= input("Enter the correct answer: (1-4) ")
-                    if answer not in ['1', '2', '3', '4']:
-                        print("Choice must be in 1 to 4!")
+                    answer= input("Enter the correct answer: (1-3) ")
+                    if answer not in ['1', '2', '3']:
+                        print("Choice must be in 1 to 3!")
                         continue
                     questions[qid] = {
                         "question": question,
@@ -34,53 +32,40 @@ def quiz_master():
                 except Exception as e:
                      print(" Error: ", e)
                 print("Question added successfully.")
-                import json
-                with open("question_bank", "a") as qb:
-                    qb.write(json.dumps({question: questions[qid]}) + "\n")
-                    
+
+                qb=open("question_bank", "a")
+                qb.write(f"Question added at {datetime.datetime.now()} \n Question ID: {qid} \n Question: {question} \n Option 1: {option1} \n Option 2: {option2} \n Option 3: {option3} \n Answer: {answer}\n")
                 
         elif choice==2:
-                print("\n View your questions here: ")
+                print("\n Your Question Bank: ")
                 print("-------------------------------------------------") 
-                qustion_bank=open("question_bank","r") 
-                print(qustion_bank.readline())
-                
+                question_bank=open("question_bank","r") 
+                print(question_bank.read())
+                print("-------------------------------------------------") 
 
         elif choice==3:
 
                 print("Delete your question here: ")
-                question_to_delete = input("Enter the question ID you want to delete: ")
-                if question_to_delete in questions:
-                    confirm=input(" Do u really want to delete this question? (Y|N)")
-                    if confirm=="Y":
-                        del questions[question_to_delete]
-                        print("Question deleted successfully.")
+                q2d = input("Enter the question ID you want to delete: ")
+                if q2d in questions:
+                    confirm=input(" Do u really want to delete this question? (y|n)")
+                    if confirm=="y":
+                        del questions[q2d]
         
                 else:
                     print("Question not found. Enter Proper ID !!")
+
+                qb=open("question_bank", "a")
+                qb.write(f"Question {q2d} deleted at {datetime.datetime.now()} \n")
+                print("Question deleted successfully.")
 
                     
         elif choice==4:
                 print(" 'Going Back To Main Menu' ")
                 break
+quiz_master()
         
 def quiz_cracker():
     print("Empty.")
+
                 
-
-def main_code():
-    while True:
-        print("Welcome to TOPS QUIZ GAMING CHALLENGE \n")
-
-        print(" Select your role: \n1. Quiz Master \n2. Quiz Cracker: \n3. Exit \n")
-        role= int(input("Select your role: "))
-        if role==1:
-            quiz_master()
-        elif role==2:
-            quiz_cracker()
-        elif role==3:
-            print("Exiting the program. Thanks For using Us. Visit again ! ")
-            break
-        else:
-            print("Invalid input selected. Please Enter between (1 , 2, 3)")
-main_code()

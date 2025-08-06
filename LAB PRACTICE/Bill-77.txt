@@ -1,0 +1,18 @@
+	Welcome to Hanan's Retail
+
+Bill No. : 77
+Customer Name : aadi
+Phone No. : 16514131315
+
+=====================================
+Product		Qty	Price
+=====================================
+Face Cream		1	120
+Face Wash		2	280
+Hair Spray		1	180
+Maza		2	80
+Coke		5	225
+Biscuits		2	40
+=====================================
+Total Amount:		Rs. 925.00
+=====================================

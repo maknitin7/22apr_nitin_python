@@ -1,0 +1,23 @@
+class Vehicle:
+    def general_info(self):
+        print("This is a vehicle.")
+
+class Car(Vehicle):
+    def fuel_type(self):
+        print("This car uses petrol or diesel.")
+
+class Electric(Vehicle):
+    def battery_info(self):
+        print("This vehicle has an electric battery.")
+
+class ElectricCar(Car, Electric):
+    def features(self):
+        print("This car is electric and eco-friendly.")
+
+
+tesla = ElectricCar()
+
+tesla.general_info()   
+tesla.fuel_type()      
+tesla.battery_info()   
+tesla.features()       
